@@ -34,7 +34,7 @@ CREATE TABLE usuarios(
 )engine=InnoDB;
 
 INSERT INTO usuarios (nome, idade, plano_id)
-VALUES ('thati', 23, 1),('Cintia', 35, 3),('bill', 20, 2),('roger', 45, 1);
+VALUES ('Thati', 23, 1),('Cintia', 35, 3),('Bill', 20, 2),('Roger', 45, 1);
 -- select * from usuarios;
 
 CREATE TABLE artistas(
@@ -43,7 +43,7 @@ CREATE TABLE artistas(
 )engine=InnoDB;
 
 INSERT INTO artistas (nome)
-VALUES ('walter phoenix'),('peter strong'),('lance day'), ('freedie shannon');
+VALUES ('Walter Phoenix'),('Peter Strong'),('Lance Day'), ('Freedie Shannon');
 -- select * from artistas;
 
 CREATE TABLE albuns(
@@ -54,7 +54,7 @@ CREATE TABLE albuns(
 )engine=InnoDB;
 
 INSERT INTO albuns (album, artista_id)
-VALUES ('envious',1),('exuberant',1),('hallowed steam',2),('incandescent',3),('temporary culture',4);
+VALUES ('Envious',1),('Exuberant',1),('Hallowed Steam',2),('Incandescent',3),('Temporary Culture',4);
 -- select * from albuns;
 
 
