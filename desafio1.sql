@@ -25,17 +25,17 @@ INSERT INTO planos (valor_plano, plano)
 VALUES ('0', 'gratuito'),(5.99, 'universitário'),(7.99, 'familia');
 -- select * from planos;
 
-CREATE TABLE usarios(
-	usario_id INT PRIMARY KEY auto_increment,
+CREATE TABLE usuarios(
+	usuario_id INT PRIMARY KEY auto_increment,
     nome varchar(300) not null,
     idade INT not null,
     plano_id INT not null,
     FOREIGN KEY (plano_id) REFERENCES planos(plano_id)
 )engine=InnoDB;
 
-INSERT INTO usarios (nome, idade, plano_id)
+INSERT INTO usuarios (nome, idade, plano_id)
 VALUES ('thati', 23, 1),('Cintia', 35, 3),('bill', 20, 2),('roger', 45, 1);
--- select * from usarios;
+-- select * from usuarios;
 
 CREATE TABLE artistas(
 	artista_id INT PRIMARY KEY auto_increment,
@@ -62,7 +62,7 @@ CREATE TABLE usuario_artista(
 	usuario_id INT not null,
     seguindo_artista INT not null,
     PRIMARY KEY (usuario_id,seguindo_artista),
-	FOREIGN KEY (usuario_id) REFERENCES usarios(usario_id),
+	FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
     FOREIGN KEY (seguindo_artista) REFERENCES artistas(artista_id)
 )engine=InnoDB;
 
@@ -103,7 +103,7 @@ CREATE TABLE hist_reproducoes(
 	usuario_id INT not null,
     cancao_id INT not null,
     PRIMARY KEY (usuario_id,cancao_id),
-	FOREIGN KEY (usuario_id) REFERENCES usarios(usario_id),
+	FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
     FOREIGN KEY (cancao_id) REFERENCES cancoes(cancao_id)
 )engine=InnoDB;
 
