@@ -22,7 +22,7 @@ CREATE TABLE planos(
 )engine=InnoDB;
 
 INSERT INTO planos (valor_plano, plano)
-VALUES ('0', 'gratuito'),(5.99, 'universitário'),(7.99, 'familia');
+VALUES (0, 'gratuito'),(5.99, 'universitário'),(7.99, 'familia');
 -- select * from planos;
 
 CREATE TABLE usuarios(
